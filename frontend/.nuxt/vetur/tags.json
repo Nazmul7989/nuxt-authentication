@@ -5,9 +5,6 @@
   "AuthRegister": {
     "description": "Auto imported from components/auth/Register.vue"
   },
-  "Dashboard": {
-    "description": "Auto imported from components/dashboard/Dashboard.vue"
-  },
   "LayoutsFooter": {
     "description": "Auto imported from components/layouts/Footer.vue"
   },
@@ -16,5 +13,14 @@
   },
   "LayoutsSidebar": {
     "description": "Auto imported from components/layouts/Sidebar.vue"
+  },
+  "Dashboard": {
+    "description": "Auto imported from components/dashboard/Dashboard.vue"
+  },
+  "ProfileChangePassword": {
+    "description": "Auto imported from components/profile/ChangePassword.vue"
+  },
+  "Profile": {
+    "description": "Auto imported from components/profile/Profile.vue"
   }
 }

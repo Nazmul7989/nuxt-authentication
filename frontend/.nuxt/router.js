@@ -4,7 +4,9 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _414676a9 = () => interopDefault(import('..\\pages\\change-password.vue' /* webpackChunkName: "pages/change-password" */))
 const _9f160e8c = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
+const _624688ba = () => interopDefault(import('..\\pages\\profile.vue' /* webpackChunkName: "pages/profile" */))
 const _3a6dade2 = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages/register" */))
 const _326554ba = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -20,9 +22,17 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/change-password",
+    component: _414676a9,
+    name: "change-password"
+  }, {
     path: "/login",
     component: _9f160e8c,
     name: "login"
+  }, {
+    path: "/profile",
+    component: _624688ba,
+    name: "profile"
   }, {
     path: "/register",
     component: _3a6dade2,
