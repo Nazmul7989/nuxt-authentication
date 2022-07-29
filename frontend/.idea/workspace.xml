@@ -20,109 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed5790b9-3c6d-4588-8dad-0ff60b74d3f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/auth/Login.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/auth/Register.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/dashboard/Dashboard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/layouts/Footer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/layouts/Header.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/layouts/Sidebar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/master.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/login.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/register.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/app/Http/Controllers/Api/V1/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/app/Http/Controllers/Api/V1/AuthController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/components/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nuxt/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/client.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/layouts/default.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/routes.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/routes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/vetur/tags.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/vetur/tags.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NuxtLogo.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Tutorial.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nuxt/loading-screen/node_modules/defu/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nuxt/loading-screen/node_modules/defu/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nuxt/loading-screen/node_modules/defu/dist/defu.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nuxt/loading-screen/node_modules/defu/dist/defu.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nuxt/loading-screen/node_modules/defu/dist/defu.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nuxt/loading-screen/node_modules/defu/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nuxt/telemetry/node_modules/defu/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nuxt/telemetry/node_modules/defu/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nuxt/telemetry/node_modules/defu/dist/defu.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nuxt/telemetry/node_modules/defu/dist/defu.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nuxt/telemetry/node_modules/defu/dist/defu.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nuxt/telemetry/node_modules/defu/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bytes/History.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/bytes/History.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bytes/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/bytes/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bytes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/bytes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bytes/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/bytes/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cookie/HISTORY.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cookie/HISTORY.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cookie/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cookie/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cookie/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cookie/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cookie/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cookie/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/defu/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/defu/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/defu/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/defu/dist/defu.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/defu/dist/defu.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/defu/dist/defu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/defu/dist/defu.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/defu/dist/defu.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/defu/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/defu/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/qs/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/qs/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/qs/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/qs/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/qs/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/qs/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/qs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/qs/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/qs/dist/qs.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/qs/dist/qs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/qs/lib/stringify.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/qs/lib/stringify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/qs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/qs/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/qs/test/parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/qs/test/parse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/qs/test/stringify.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/qs/test/stringify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serve-placeholder/node_modules/defu/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serve-placeholder/node_modules/defu/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serve-placeholder/node_modules/defu/dist/defu.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serve-placeholder/node_modules/defu/dist/defu.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serve-placeholder/node_modules/defu/dist/defu.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serve-placeholder/node_modules/defu/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/base.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/type-fest/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/license" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/type-fest/license" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/type-fest/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/type-fest/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/async-return-type.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/asyncify.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/basic.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/type-fest/source/basic.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/conditional-except.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/conditional-keys.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/conditional-pick.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/entries.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/entry.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/fixed-length-array.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/iterable-element.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/literal-union.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/type-fest/source/literal-union.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/opaque.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/type-fest/source/opaque.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/package-json.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/type-fest/source/package-json.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/promise-value.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/require-at-least-one.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/type-fest/source/require-at-least-one.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/require-exactly-one.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/type-fest/source/require-exactly-one.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/set-optional.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/type-fest/source/set-optional.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/set-required.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/type-fest/source/set-required.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/set-return-type.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/stringified.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/tsconfig-json.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/union-to-intersection.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/utilities.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/source/value-of.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/ts41/camel-case.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/ts41/delimiter-case.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/ts41/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/ts41/kebab-case.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/ts41/pascal-case.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/ts41/snake-case.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nuxt/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nuxt/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/Register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layouts/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/layouts/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layouts/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/layouts/Sidebar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1659063777174</updated>
       <workItem from="1659063778207" duration="38000" />
-      <workItem from="1659068834054" duration="11498000" />
+      <workItem from="1659068834054" duration="20097000" />
     </task>
     <servers />
   </component>

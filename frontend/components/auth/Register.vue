@@ -15,26 +15,42 @@
             <div class="card">
               <div class="card-body">
                 <div class="m-sm-4">
-                  <form>
+                  <form @submit.prevent="register">
                     <div class="mb-3">
                       <label class="form-label">Name</label>
-                      <input class="form-control form-control-lg" type="text" name="name" placeholder="Enter your name" />
+                      <input class="form-control form-control-lg"
+                             v-model="formData.name"
+                             type="text" name="name" placeholder="Enter your name" />
                     </div>
-                    <div class="mb-3">
-                      <label class="form-label">Company</label>
-                      <input class="form-control form-control-lg" type="text" name="company" placeholder="Enter your company name" />
-                    </div>
+
                     <div class="mb-3">
                       <label class="form-label">Email</label>
-                      <input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" />
+                      <input class="form-control form-control-lg"
+                             v-model="formData.email"
+                             type="email" name="email" placeholder="Enter your email" />
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Password</label>
-                      <input class="form-control form-control-lg" type="password" name="password" placeholder="Enter password" />
+                      <input class="form-control form-control-lg"
+                             v-model="formData.password"
+                             type="password" name="password" placeholder="Enter password" />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Confirm Password</label>
+                      <input class="form-control form-control-lg"
+                             v-model="formData.password_confirmation"
+                             type="password" name="password" placeholder="Enter password" />
+                    </div>
+                    <div>
+                      <label>
+                        Already have an Account?
+                        <NuxtLink :to="{name : 'login'}" class="form-check-label">
+                          Login Here...
+                        </NuxtLink>
+                      </label>
                     </div>
                     <div class="text-center mt-3">
-                      <a href="index.html" class="btn btn-lg btn-primary">Sign up</a>
-                      <!-- <button type="submit" class="btn btn-lg btn-primary">Sign up</button> -->
+                       <button type="submit" class="btn btn-lg btn-primary">Sign up</button>
                     </div>
                   </form>
                 </div>
@@ -50,7 +66,26 @@
 
 <script>
 export default {
-name: "Register"
+  name: "Register",
+  data (){
+    return {
+      formData: {
+        name: '',
+        email: '',
+        password: '',
+        password_confirmation: '',
+      }
+    }
+  },
+  methods: {
+    async register(){
+      await this.$axios.$post('/auth/register',this.formData).then((res)=>{
+        this.$router.push({name: 'login'})
+      }).catch((error)=>{
+        console.log(error)
+      })
+    }
+  }
 }
 </script>
 

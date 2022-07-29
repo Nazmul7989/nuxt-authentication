@@ -249,7 +249,7 @@
               Privacy</a>
             <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Log out</a>
+            <a class="dropdown-item" @click.prevent="logout">Log out</a>
           </div>
         </li>
       </ul>
@@ -259,7 +259,14 @@
 
 <script>
 export default {
-name: "Header"
+  name: "Header",
+  methods: {
+    async logout(){
+      await this.$auth.logout().then((res)=>{
+        this.$router.push({name: 'login'})
+      });
+    }
+  }
 }
 </script>
 

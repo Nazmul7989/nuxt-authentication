@@ -6,7 +6,7 @@
           <div class="d-table-cell align-middle">
 
             <div class="text-center mt-4">
-              <h1 class="h2">Welcome back, Charles</h1>
+              <h1 class="h2">Welcome back</h1>
               <p class="lead">
                 Sign in to your account to continue
               </p>
@@ -19,29 +19,30 @@
                     <img src="~/assets/img/avatars/avatar.jpg" alt="Charles Hall"
                          class="img-fluid rounded-circle" width="132" height="132" />
                   </div>
-                  <form>
+                  <form @submit.prevent="login">
                     <div class="mb-3">
                       <label class="form-label">Email</label>
-                      <input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" />
+                      <input class="form-control form-control-lg"
+                             type="email" v-model="formData.email" name="email"
+                             placeholder="Enter your email" />
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Password</label>
-                      <input class="form-control form-control-lg" type="password" name="password" placeholder="Enter your password" />
-                      <small>
-                        <a href="pages-reset-password.html">Forgot password?</a>
-                      </small>
+                      <input class="form-control form-control-lg"
+                             type="password" v-model="formData.password"
+                             name="password"
+                             placeholder="Enter your password" />
                     </div>
                     <div>
-                      <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value="remember-me" name="remember-me" checked>
-                        <span class="form-check-label">
-													Remember me next time
-												</span>
+                      <label >
+                        Don't have an Account?
+                        <NuxtLink :to="{name : 'register'}" class="form-check-label">
+													 Register Here...
+												</NuxtLink>
                       </label>
                     </div>
                     <div class="text-center mt-3">
-                      <a href="index.html" class="btn btn-lg btn-primary">Sign in</a>
-                      <!-- <button type="submit" class="btn btn-lg btn-primary">Sign in</button> -->
+                       <button type="submit" class="btn btn-lg btn-primary">Sign in</button>
                     </div>
                   </form>
                 </div>
@@ -57,7 +58,25 @@
 
 <script>
 export default {
-name: "Login"
+  name: "Login",
+  data (){
+    return {
+      formData: {
+        email: 'nazmul.ns7989@gmail.com',
+        password: '12345678',
+      }
+    }
+  },
+  methods: {
+    async login(){
+      try {
+        let response = await this.$auth.loginWith('local', { data: this.formData })
+        this.$toast.success('Logged In!')
+      } catch (err) {
+        console.log(err)
+      }
+    }
+  }
 }
 </script>
 

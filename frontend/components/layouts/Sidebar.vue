@@ -21,8 +21,9 @@
                  alt="Charles Hall" />
           </div>
           <div class="flex-grow-1 ps-2">
-            <a class="sidebar-user-title dropdown-toggle" href="#" data-bs-toggle="dropdown">
-              Charles Hall
+            <a class="sidebar-user-title dropdown-toggle" v-if="loggedIn"
+               data-bs-toggle="dropdown">
+              {{ user.name }}
             </a>
             <div class="dropdown-menu dropdown-menu-start">
               <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
@@ -32,7 +33,7 @@
                 Privacy</a>
               <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Log out</a>
+              <a class="dropdown-item" @click.prevent="logout">Log out</a>
             </div>
 
             <div class="sidebar-user-subtitle">Designer</div>
@@ -273,7 +274,22 @@
 
 <script>
 export default {
-name: "Sidebar"
+  name: "Sidebar",
+  computed: {
+    user(){
+      return this.$store.state.auth.user
+    },
+    loggedIn(){
+      return this.$store.state.auth.loggedIn
+    }
+  },
+  methods: {
+    async logout(){
+      await this.$auth.logout().then((res)=>{
+        this.$router.push({name: 'login'})
+      });
+    }
+  }
 }
 </script>
 
