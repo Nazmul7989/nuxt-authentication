@@ -6,9 +6,14 @@ import NuxtError from './components/nuxt-error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import _6f6c098b from './layouts/default.vue'
+import '..\\assets\\css\\custom.css'
 
-const layouts = { "_default": sanitizeComponent(_6f6c098b) }
+import '..\\assets\\css\\light.css'
+
+import _6f6c098b from '..\\layouts\\default.vue'
+import _7e1c65d8 from '..\\layouts\\master.vue'
+
+const layouts = { "_default": sanitizeComponent(_6f6c098b),"_master": sanitizeComponent(_7e1c65d8) }
 
 export default {
   render (h, props) {

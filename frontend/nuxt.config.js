@@ -12,13 +12,28 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'shortcut icon', type: 'image/png', href: '~/assets/img/icons/icon-48x48.png' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap' },
+
+    ],
+    //Global Js
+    script: [
+      { src: '/js/settings.js', type: 'text/javascript', body: true, defer: true },
+      { src: '/js/app.js', type: 'text/javascript', body: true, defer: true },
+      { src: '/js/custom.js', type: 'text/javascript', body: true, defer: true },
+      { src: '/js/datatables.js', type: 'text/javascript', body: true, defer: true },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/css/custom.css',
+    '~/assets/css/light.css',
+    // '~/assets/css/dark.css',
   ],
+
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -33,7 +48,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/auth-next',
   ],
+  auth: {
+    // Options
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

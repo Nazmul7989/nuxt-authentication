@@ -1,8 +1,20 @@
 {
-  "NuxtLogo": {
-    "description": "Auto imported from components/NuxtLogo.vue"
+  "AuthLogin": {
+    "description": "Auto imported from components/auth/Login.vue"
   },
-  "Tutorial": {
-    "description": "Auto imported from components/Tutorial.vue"
+  "AuthRegister": {
+    "description": "Auto imported from components/auth/Register.vue"
+  },
+  "Dashboard": {
+    "description": "Auto imported from components/dashboard/Dashboard.vue"
+  },
+  "LayoutsFooter": {
+    "description": "Auto imported from components/layouts/Footer.vue"
+  },
+  "LayoutsHeader": {
+    "description": "Auto imported from components/layouts/Header.vue"
+  },
+  "LayoutsSidebar": {
+    "description": "Auto imported from components/layouts/Sidebar.vue"
   }
 }

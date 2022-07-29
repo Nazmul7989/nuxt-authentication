@@ -1,9 +1,11 @@
 <template>
-  <Tutorial/>
+  <Dashboard/>
 </template>
 
 <script>
+import Dashboard from "~/components/dashboard/Dashboard";
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  components: {Dashboard}
 }
 </script>
