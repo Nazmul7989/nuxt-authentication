@@ -5,6 +5,9 @@
   "AuthRegister": {
     "description": "Auto imported from components/auth/Register.vue"
   },
+  "Dashboard": {
+    "description": "Auto imported from components/dashboard/Dashboard.vue"
+  },
   "LayoutsFooter": {
     "description": "Auto imported from components/layouts/Footer.vue"
   },
@@ -19,8 +22,5 @@
   },
   "Profile": {
     "description": "Auto imported from components/profile/Profile.vue"
-  },
-  "Dashboard": {
-    "description": "Auto imported from components/dashboard/Dashboard.vue"
   }
 }

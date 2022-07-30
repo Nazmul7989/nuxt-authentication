@@ -29,9 +29,7 @@
             <h5 class="card-title mb-0">Profile Info</h5>
           </div>
           <div class="card-body h-100">
-            <form  @submit.prevent="updateProfile"
-                   @keydown="form.onKeydown($event)" method="post"
-                   enctype="multipart/form-data">
+            <form  @submit.prevent="updateProfile" @keydown="form.onKeydown($event)" enctype="multipart/form-data">
               <div class="row">
                 <div class="col-md-6">
                   <div class="mb-3">
@@ -78,12 +76,16 @@
                   <div class="row">
                     <div class="col-10">
                       <div class="mb-3">
-                        <label class="form-label">Profile Photo</label>
-                        <input type="file" class="form-control" @change="onImageChange"/>
+                        <label for="profile_picture" class="form-label">Profile
+                          Photo</label>
+                        <input type="file" id="profile_picture" class="form-control"
+                               @change="onImageChange"/>
                       </div>
                     </div>
                     <div class="col-2">
-                      <img v-if="imageShow" :src="imageShow" style="width: 90%; height: 100px;" alt="">
+                      <img v-if="imageShow != null" :src="imageShow"
+                           style="width:
+                      90%; height: 100px;" alt="">
                       <img v-else src="~/assets/img/avatars/noImage.jpg" style="width: 90%; height: 100px;" alt="">
                     </div>
                   </div>
@@ -122,7 +124,7 @@ export default {
         profile_picture: '',
       }),
 
-      imageShow: '',
+      imageShow: null,
     }
   },
   computed: {
@@ -150,6 +152,7 @@ export default {
       };
       reader.readAsDataURL(file);
     },
+
     updateProfile(){
       this.form.post('/update-profile',this.$objectToFD(this.form)).then((res)=>{
         this.form.profile_picture = '';
@@ -168,6 +171,7 @@ export default {
         })
       })
     },
+
   },
 
 }

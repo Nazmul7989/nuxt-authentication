@@ -40,8 +40,11 @@ export default {
     '~/plugins/vform.js',
     //Object to form data for image upload
     '~/plugins/objectToFormData.js',
+    //show toastr notification
+    // '~/plugins/toastr.js',
     //Add Sweet Alert
     { src: '~/plugins/swal.js', ssr: false },
+
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

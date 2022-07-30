@@ -8,9 +8,9 @@ You can directly use them in pages and other components without the need to impo
 
 - `<AuthLogin>` | `<auth-login>` (components/auth/Login.vue)
 - `<AuthRegister>` | `<auth-register>` (components/auth/Register.vue)
+- `<Dashboard>` | `<dashboard>` (components/dashboard/Dashboard.vue)
 - `<LayoutsFooter>` | `<layouts-footer>` (components/layouts/Footer.vue)
 - `<LayoutsHeader>` | `<layouts-header>` (components/layouts/Header.vue)
 - `<LayoutsSidebar>` | `<layouts-sidebar>` (components/layouts/Sidebar.vue)
 - `<ProfileChangePassword>` | `<profile-change-password>` (components/profile/ChangePassword.vue)
 - `<Profile>` | `<profile>` (components/profile/Profile.vue)
-- `<Dashboard>` | `<dashboard>` (components/dashboard/Dashboard.vue)
