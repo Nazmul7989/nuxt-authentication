@@ -3,6 +3,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\AuthController;
+use App\Http\Controllers\Api\V1\ProfileController;
 
 
 
@@ -17,5 +18,13 @@ Route::group([
     Route::post('logout', [AuthController::class,'logout']);
     Route::post('refresh', [AuthController::class,'refresh']);
     Route::post('me', [AuthController::class,'me']);
+
+});
+
+Route::group([
+    'middleware' => 'api',
+], function ($router) {
+    Route::post('change-password', [ProfileController::class,'changePassword'])->name('changePassword');
+    Route::post('update-profile', [ProfileController::class,'updateProfile'])->name('updateProfile');
 
 });

@@ -66,6 +66,10 @@ export default function (ctx, inject) {
     "user": {
       "url": "/auth/me",
       "method": "post"
+    },
+    "changePassword": {
+      "url": "/change-password",
+      "method": "post"
     }
   },
   "name": "local"

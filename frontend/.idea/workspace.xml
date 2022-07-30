@@ -20,50 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed5790b9-3c6d-4588-8dad-0ff60b74d3f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/plugins/swal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/vform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/app/Http/Controllers/Api/V1/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/app/Http/Controllers/Api/V1/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/components/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/vetur/tags.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/vetur/tags.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/Register.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layouts/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/layouts/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layouts/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/layouts/Sidebar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/profile/ChangePassword.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/profile/ChangePassword.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/UPGRADE_GUIDE.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/UPGRADE_GUIDE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/dist/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/dist/axios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/dist/axios.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/dist/axios.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/dist/axios.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/dist/axios.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/dist/axios.min.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/dist/axios.min.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/adapters/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/lib/adapters/http.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/adapters/xhr.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/lib/adapters/xhr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/lib/axios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/cancel/Cancel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/cancel/CancelToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/lib/cancel/CancelToken.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/Axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/lib/core/Axios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/createError.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/dispatchRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/lib/core/dispatchRequest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/enhanceError.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/mergeConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/lib/core/mergeConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/settle.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/lib/core/settle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/core/transformData.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/lib/core/transformData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/defaults.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/isAbsoluteURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/lib/helpers/isAbsoluteURL.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/isAxiosError.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/lib/helpers/isAxiosError.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/helpers/validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/lib/helpers/validator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/lib/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/lib/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/axios/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/axios/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +80,7 @@
       <updated>1659063777174</updated>
       <workItem from="1659063778207" duration="38000" />
       <workItem from="1659068834054" duration="24518000" />
-      <workItem from="1659150274312" duration="11754000" />
+      <workItem from="1659150274312" duration="13513000" />
     </task>
     <servers />
   </component>

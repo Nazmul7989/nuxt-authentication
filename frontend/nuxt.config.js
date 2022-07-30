@@ -38,6 +38,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/vform.js',
+    //Add Sweet Alert
     { src: '~/plugins/swal.js', ssr: false },
   ],
 
@@ -71,7 +72,8 @@ export default {
           register: { url: '/auth/register', method: 'post' },
           login: { url: '/auth/login', method: 'post' },
           logout: { url: '/auth/logout', method: 'post' },
-          user: { url: '/auth/me', method: 'post' }
+          user: { url: '/auth/me', method: 'post' },
+          changePassword: { url: '/change-password', method: 'post' }
         }
       }
     }

@@ -37,44 +37,33 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="mb-3">
-                    <label class="form-label">Enter Your Current
+                    <label for="current_password" class="form-label">Enter Your Current
                       Password</label>
-                    <input type="password" v-model="form.current_password"
-                           class="form-control"
-                           placeholder="Current Password">
-                    <div class="text-danger" v-if="form.errors.has('current_password')"
-                         v-html="form.errors.get('current_password')" />
-                  </div>
+                    <input type="password" v-model="form.current_password" id="current_password"
+                           class="form-control" placeholder="Current Password"/>
+                    <div class="text-danger" v-if="form.errors.has('current_password')" v-html="form.errors.get('current_password')"></div>
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="mb-3">
-                    <label class="form-label">Enter Your New
-                      Password</label>
-                    <input type="password" v-model="form.new_password"
-                           class="form-control"
-                           placeholder="New Password">
-                    <div class="text-danger" v-if="form.errors.has('new_password')"
-                         v-html="form.errors.get('new_password')" />
-                  </div>
+                    <label for="new_password" class="form-label">Enter Your New Password</label>
+                    <input type="password" v-model="form.new_password" id="new_password"
+                           class="form-control" placeholder="New Password"/>
+                    <div class="text-danger" v-if="form.errors.has('new_password')" v-html="form.errors.get('new_password')" ></div>
                   </div>
                 </div>
-
+                <hr />
+                <div class="col-md-12">
+                  <button type="submit" :disabled="form.busy" class="btn btn-primary">Change Password</button>
+                </div>
               </div>
-
-              <hr />
-              <div class="col-md-12">
-                <button type="submit" :disabled="form.busy"
-                        class="btn btn-primary">Change
-                  Password</button>
-              </div>
-
             </form>
 
           </div>
         </div>
       </div>
     </div>
+
 
   </div>
 </template>
@@ -92,9 +81,29 @@ export default {
   },
   methods : {
     changePassword(){
-      // this.form.post('/')
+      this.form.post('/change-password').then((res)=>{
+        if (res.data.status === true){
+          Toast.fire({
+            icon: 'success',
+            title: 'Password Changed Successfully.'
+          })
+        }else {
+          Toast.fire({
+            icon: 'error',
+            title: res.data.message
+          })
+        }
+
+      }).catch((error)=>{
+        Toast.fire({
+          icon: 'error',
+          title: error.response.data.message
+        })
+      })
     },
+
   },
+
 }
 </script>
 
