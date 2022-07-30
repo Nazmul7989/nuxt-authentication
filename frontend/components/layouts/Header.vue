@@ -179,8 +179,13 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-icon pe-md-0 dropdown-toggle" href="#" data-bs-toggle="dropdown">
-            <img src="~/assets/img/avatars/avatar.jpg" class="avatar img-fluid rounded"
-                 alt="Charles Hall" />
+            <img v-if="user.profile_picture != null"
+                 :src="imageURL + user.profile_picture" class="avatar img-fluid rounded"
+                 alt="" />
+
+          <img v-else src="~/assets/img/avatars/user.jpg"
+                class="avatar img-fluid rounded"
+               alt="" />
           </a>
           <div class="dropdown-menu dropdown-menu-end">
             <NuxtLink :to="{name : 'profile'}"  class="dropdown-item" >
@@ -192,7 +197,7 @@
               Change Password
             </NuxtLink>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="pages-settings.html"><i class="align-middle me-1" data-feather="settings"></i> Settings &
+            <a class="dropdown-item" ><i class="align-middle me-1" data-feather="settings"></i> Settings &
               Privacy</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" @click.prevent="logout">Log out</a>
@@ -206,6 +211,16 @@
 <script>
 export default {
   name: "Header",
+  data(){
+    return{
+      imageURL: process.env.NUXT_API_IMAGE_URL,
+    }
+  },
+  computed: {
+    user(){
+      return this.$store.state.auth.user
+    },
+  },
   methods: {
     async logout(){
       await this.$auth.logout().then((res)=>{

@@ -10,9 +10,14 @@
             <h5 class="card-title mb-0">Profile Details</h5>
           </div>
           <div class="card-body text-center">
-            <img src="~/assets/img/avatars/user.jpg"
+
+            <img v-if="user.profile_picture != null"
+                 :src="imageURL + user.profile_picture"
                  class="img-fluid rounded-circle border mb-2" width="128"
-                 height="128" />
+                 height="128" alt=""/>
+            <img v-else src="~/assets/img/avatars/user.jpg"
+                 class="img-fluid rounded-circle border mb-2" width="128"
+                 height="128" alt=""/>
             <h5 class="card-title mb-0">{{ user.name }}</h5>
             <div class="text-muted mb-2">{{ user.email }}</div>
 
@@ -29,15 +34,14 @@
             <h5 class="card-title mb-0">Profile Info</h5>
           </div>
           <div class="card-body h-100">
-            <form  @submit.prevent="updateProfile" @keydown="form.onKeydown($event)" enctype="multipart/form-data">
+            <form  @submit.prevent="updateProfile" enctype="multipart/form-data">
               <div class="row">
                 <div class="col-md-6">
                   <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
                     <input type="text" v-model="form.name" id="name" class="form-control" placeholder="Name">
-                    <div class="text-danger" v-if="form.errors.has('name')"
-                         v-html="form.errors.get('name')">
-
+                    <div class="text-danger" v-if="errorMessage">
+                        {{ errorMessage }}
                     </div>
 
                 </div>
@@ -114,7 +118,7 @@ export default {
   name: "Profile",
   data (){
     return {
-      form: this.$vform({
+      form: {
         name: '',
         city: '',
         state: '',
@@ -122,23 +126,11 @@ export default {
         organization: '',
         profession: '',
         profile_picture: '',
-      }),
+      },
 
       imageShow: null,
-    }
-  },
-  computed: {
-    user(){
-      let userData =  this.$store.state.auth.user
-
-      this.form.name = userData.name;
-      this.form.city = userData.city;
-      this.form.state = userData.state;
-      this.form.country = userData.country;
-      this.form.organization = userData.organization;
-      this.form.profession = userData.profession;
-
-      return this.$store.state.auth.user
+      errorMessage: '',
+      imageURL: process.env.NUXT_API_IMAGE_URL,
     }
   },
   methods : {
@@ -153,8 +145,19 @@ export default {
       reader.readAsDataURL(file);
     },
 
-    updateProfile(){
-      this.form.post('/update-profile',this.$objectToFD(this.form)).then((res)=>{
+    async updateProfile(){
+
+      let formData = new FormData();
+
+      formData.append('name',this.form.name)
+      formData.append('city',this.form.city)
+      formData.append('state',this.form.state)
+      formData.append('country',this.form.country)
+      formData.append('organization',this.form.organization)
+      formData.append('profession',this.form.profession)
+      formData.append('profile_picture',this.form.profile_picture)
+
+      await this.$axios.post('/update-profile',formData).then((res)=>{
         this.form.profile_picture = '';
 
         this.$auth.fetchUser()
@@ -165,6 +168,7 @@ export default {
         })
 
       }).catch((error)=>{
+        this.errorMessage = error.response.data.message
         Toast.fire({
           icon: 'error',
           title: error.response.data.message
@@ -172,6 +176,34 @@ export default {
       })
     },
 
+  },
+  computed: {
+    user(){
+      let userData =  this.$store.state.auth.user
+
+
+      if (userData.name != null){
+        this.form.name = userData.name;
+      }
+      if (userData.city != null){
+        this.form.city = userData.city;
+      }
+      if (userData.state != null){
+        this.form.state = userData.state;
+      }
+      if (userData.country != null){
+        this.form.country = userData.country;
+      }
+      if (userData.organization != null){
+        this.form.organization = userData.organization;
+      }
+      if (userData.profession != null){
+        this.form.profession = userData.profession;
+      }
+
+
+      return this.$store.state.auth.user
+    }
   },
 
 }

@@ -3,30 +3,35 @@
     "name": "change-password",
     "path": "/change-password",
     "component": "C:\\\\xampp\\\\htdocs\\\\My_Projects\\\\Nuxt Js\\\\nuxt-authentication\\\\frontend\\\\pages\\\\change-password.vue",
-    "chunkName": "pages/change-password"
+    "chunkName": "pages/change-password",
+    "_name": "_414676a9"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "C:\\\\xampp\\\\htdocs\\\\My_Projects\\\\Nuxt Js\\\\nuxt-authentication\\\\frontend\\\\pages\\\\login.vue",
-    "chunkName": "pages/login"
+    "chunkName": "pages/login",
+    "_name": "_9f160e8c"
   },
   {
     "name": "profile",
     "path": "/profile",
     "component": "C:\\\\xampp\\\\htdocs\\\\My_Projects\\\\Nuxt Js\\\\nuxt-authentication\\\\frontend\\\\pages\\\\profile.vue",
-    "chunkName": "pages/profile"
+    "chunkName": "pages/profile",
+    "_name": "_624688ba"
   },
   {
     "name": "register",
     "path": "/register",
     "component": "C:\\\\xampp\\\\htdocs\\\\My_Projects\\\\Nuxt Js\\\\nuxt-authentication\\\\frontend\\\\pages\\\\register.vue",
-    "chunkName": "pages/register"
+    "chunkName": "pages/register",
+    "_name": "_3a6dade2"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\xampp\\\\htdocs\\\\My_Projects\\\\Nuxt Js\\\\nuxt-authentication\\\\frontend\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_326554ba"
   }
 ]

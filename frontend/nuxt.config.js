@@ -31,19 +31,15 @@ export default {
   css: [
     '~/assets/css/custom.css',
     '~/assets/css/light.css',
-    // '~/assets/css/dark.css',
   ],
 
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/vform.js',
-    //Object to form data for image upload
     '~/plugins/objectToFormData.js',
-    //show toastr notification
-    // '~/plugins/toastr.js',
-    //Add Sweet Alert
     { src: '~/plugins/swal.js', ssr: false },
+    // '~/plugins/toastr.js',
 
   ],
 
@@ -52,12 +48,14 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    ['@nuxtjs/dotenv', { filename: '.env.production' }]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/auth-next',
+    ['@nuxtjs/dotenv', { filename: '.env.local' }]
   ],
   //nuxt auth package configuration
   auth: {
@@ -78,7 +76,8 @@ export default {
           login: { url: '/auth/login', method: 'post' },
           logout: { url: '/auth/logout', method: 'post' },
           user: { url: '/auth/me', method: 'post' },
-          changePassword: { url: '/change-password', method: 'post' }
+          changePassword: { url: '/change-password', method: 'post' },
+          updateProfile: { url: '/update-profile', method: 'post' }
         }
       }
     }
@@ -91,7 +90,7 @@ export default {
 
   //axios configuration
   axios: {
-    baseURL : 'http://127.0.0.1:8000/api'
+    baseURL : process.env.NUXT_API_BASE_URL,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

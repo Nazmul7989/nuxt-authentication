@@ -16,8 +16,10 @@
       <div class="sidebar-user">
         <div class="d-flex justify-content-center">
           <div class="flex-shrink-0">
-            <img src="~/assets/img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1"
-                 alt="Charles Hall" />
+            <img v-if="user.profile_picture != null"
+                 :src="imageURL + user.profile_picture" class="avatar img-fluid rounded me-1" alt="" />
+            <img v-else src="~/assets/img/avatars/user.jpg"
+                 class="avatar img-fluid rounded me-1" alt="" />
           </div>
           <div class="flex-grow-1 ps-2">
             <a class="sidebar-user-title dropdown-toggle" v-if="loggedIn"
@@ -71,6 +73,11 @@
 <script>
 export default {
   name: "Sidebar",
+  data(){
+    return{
+      imageURL: process.env.NUXT_API_IMAGE_URL,
+    }
+  },
   computed: {
     user(){
       return this.$store.state.auth.user

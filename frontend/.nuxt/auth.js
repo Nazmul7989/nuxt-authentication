@@ -70,6 +70,10 @@ export default function (ctx, inject) {
     "changePassword": {
       "url": "/change-password",
       "method": "post"
+    },
+    "updateProfile": {
+      "url": "/update-profile",
+      "method": "post"
     }
   },
   "name": "local"
