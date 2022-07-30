@@ -37,6 +37,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/vform.js',
+    { src: '~/plugins/swal.js', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -66,6 +68,7 @@ export default {
           autoFetch: true
         },
         endpoints: {
+          register: { url: '/auth/register', method: 'post' },
           login: { url: '/auth/login', method: 'post' },
           logout: { url: '/auth/logout', method: 'post' },
           user: { url: '/auth/me', method: 'post' }

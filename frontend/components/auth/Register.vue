@@ -15,31 +15,44 @@
             <div class="card">
               <div class="card-body">
                 <div class="m-sm-4">
-                  <form @submit.prevent="register">
+                  <form @submit.prevent="register" @keydown="form.onKeydown($event)">
                     <div class="mb-3">
                       <label class="form-label">Name</label>
                       <input class="form-control form-control-lg"
-                             v-model="formData.name"
+                             v-model="form.name"
                              type="text" name="name" placeholder="Enter your name" />
+                      <div class="text-danger" v-if="form.errors.has('name')"
+                            v-html="form.errors.get('name')" />
+
                     </div>
 
                     <div class="mb-3">
                       <label class="form-label">Email</label>
                       <input class="form-control form-control-lg"
-                             v-model="formData.email"
+                             v-model="form.email"
                              type="email" name="email" placeholder="Enter your email" />
+                      <div class="text-danger" v-if="form.errors.has('email')"
+                            v-html="form.errors.get('email')" />
+
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Password</label>
                       <input class="form-control form-control-lg"
-                             v-model="formData.password"
+                             v-model="form.password"
                              type="password" name="password" placeholder="Enter password" />
+                      <div class="text-danger" v-if="form.errors.has('password')"
+                            v-html="form.errors.get('password')" />
+
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Confirm Password</label>
                       <input class="form-control form-control-lg"
-                             v-model="formData.password_confirmation"
-                             type="password" name="password" placeholder="Enter password" />
+                             v-model="form.password_confirmation"
+                             type="password" name="password"
+                             placeholder="Enter confirm password" />
+                      <div class="text-danger" v-if="form.errors.has('password_confirmation')"
+                            v-html="form.errors.get('password_confirmation')" />
+
                     </div>
                     <div>
                       <label>
@@ -50,7 +63,8 @@
                       </label>
                     </div>
                     <div class="text-center mt-3">
-                       <button type="submit" class="btn btn-lg btn-primary">Sign up</button>
+                       <button type="submit" :disabled="form.busy"
+                               class="btn btn-lg btn-primary">Sign up</button>
                     </div>
                   </form>
                 </div>
@@ -69,20 +83,28 @@ export default {
   name: "Register",
   data (){
     return {
-      formData: {
+      form: this.$vform({
         name: '',
         email: '',
         password: '',
         password_confirmation: '',
-      }
+      })
+
     }
   },
   methods: {
     async register(){
-      await this.$axios.$post('/auth/register',this.formData).then((res)=>{
+      await this.form.post('/auth/register').then((res)=>{
         this.$router.push({name: 'login'})
-      }).catch((error)=>{
-        console.log(error)
+
+        Toast.fire({
+          icon: 'success',
+          title: 'Sign Up successful'
+        })
+
+        //Login after Registration
+        // this.$auth.setUserToken(res.data.access_token)
+
       })
     }
   }

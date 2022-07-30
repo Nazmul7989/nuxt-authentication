@@ -19,19 +19,23 @@
                     <img src="~/assets/img/avatars/avatar.jpg" alt="Charles Hall"
                          class="img-fluid rounded-circle" width="132" height="132" />
                   </div>
-                  <form @submit.prevent="login">
+                  <form @submit.prevent="login" @keydown="form.onKeydown($event)">
                     <div class="mb-3">
                       <label class="form-label">Email</label>
                       <input class="form-control form-control-lg"
-                             type="email" v-model="formData.email" name="email"
+                             type="email" v-model="form.email" name="email"
                              placeholder="Enter your email" />
+                      <div class="text-danger" v-if="form.errors.has('email')"
+                           v-html="form.errors.get('email')" />
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Password</label>
                       <input class="form-control form-control-lg"
-                             type="password" v-model="formData.password"
+                             type="password" v-model="form.password"
                              name="password"
                              placeholder="Enter your password" />
+                      <div class="text-danger" v-if="form.errors.has('password')"
+                           v-html="form.errors.get('password')" />
                     </div>
                     <div>
                       <label >
@@ -42,7 +46,8 @@
                       </label>
                     </div>
                     <div class="text-center mt-3">
-                       <button type="submit" class="btn btn-lg btn-primary">Sign in</button>
+                       <button type="submit" :disabled="form.busy"
+                               class="btn btn-lg btn-primary">Sign in</button>
                     </div>
                   </form>
                 </div>
@@ -61,19 +66,31 @@ export default {
   name: "Login",
   data (){
     return {
-      formData: {
+      form: this.$vform({
         email: 'nazmul.ns7989@gmail.com',
         password: '12345678',
-      }
+      })
     }
   },
   methods: {
     async login(){
       try {
-        let response = await this.$auth.loginWith('local', { data: this.formData })
-        this.$toast.success('Logged In!')
-      } catch (err) {
-        console.log(err)
+        await this.form.post('/auth/login').then((res)=>{
+          this.$auth.setUserToken(res.data.access_token)
+
+          Toast.fire({
+            icon: 'success',
+            title: 'Signed in successfully'
+          })
+
+        })
+      } catch (error) {
+        if (error.response){
+          Toast.fire({
+            icon: 'error',
+            title: error.response.data.message
+          })
+        }
       }
     }
   }

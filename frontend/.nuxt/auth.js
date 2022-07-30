@@ -51,6 +51,10 @@ export default function (ctx, inject) {
     "autoFetch": true
   },
   "endpoints": {
+    "register": {
+      "url": "/auth/register",
+      "method": "post"
+    },
     "login": {
       "url": "/auth/login",
       "method": "post"

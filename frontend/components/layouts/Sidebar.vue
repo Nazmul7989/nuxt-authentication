@@ -83,6 +83,12 @@ export default {
     async logout(){
       await this.$auth.logout().then((res)=>{
         this.$router.push({name: 'login'})
+
+        Toast.fire({
+          icon: 'success',
+          title: 'Logout successfully'
+        })
+
       });
     }
   }
