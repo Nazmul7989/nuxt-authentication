@@ -41,8 +41,7 @@
                       Password</label>
                     <input type="password" v-model="form.current_password" id="current_password"
                            class="form-control" placeholder="Current Password"/>
-                    <div class="text-danger" v-if="form.errors.has('current_password')" v-html="form.errors.get('current_password')"></div>
-                  </div>
+                    <div class="text-danger" v-if="form.errors.has('current_password')" v-html="form.errors.get('current_password')"></div></div>
                 </div>
                 <div class="col-md-12">
                   <div class="mb-3">
@@ -83,10 +82,14 @@ export default {
     changePassword(){
       this.form.post('/change-password').then((res)=>{
         if (res.data.status === true){
+          this.form.current_password = '';
+          this.form.new_password = '';
+
           Toast.fire({
             icon: 'success',
             title: 'Password Changed Successfully.'
           })
+
         }else {
           Toast.fire({
             icon: 'error',

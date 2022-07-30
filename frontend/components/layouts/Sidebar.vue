@@ -30,7 +30,7 @@
                 Profile
               </NuxtLink>
               <NuxtLink :to="{name : 'change-password'}" class="dropdown-item">
-                <i class="align-middle me-1" data-feather="pie-chart"></i>
+                <i class="align-middle me-1" data-feather="key"></i>
                 Change Password
               </NuxtLink>
               <div class="dropdown-divider"></div>

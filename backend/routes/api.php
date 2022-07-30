@@ -24,7 +24,7 @@ Route::group([
 Route::group([
     'middleware' => 'api',
 ], function ($router) {
-    Route::post('change-password', [ProfileController::class,'changePassword'])->name('changePassword');
     Route::post('update-profile', [ProfileController::class,'updateProfile'])->name('updateProfile');
+    Route::post('change-password', [ProfileController::class,'changePassword'])->name('changePassword');
 
 });

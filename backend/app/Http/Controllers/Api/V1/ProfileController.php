@@ -8,64 +8,50 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\Validator;
+
 
 class ProfileController extends Controller
 {
     //update profile info
     public function updateProfile(Request $request)
     {
-        $rules = [
+
+        $request->validate([
             'name'    => 'required|string',
-        ];
+        ]);
 
-        $validator = Validator::make($request->all(),$rules);
+        $user = auth('api')->user();
 
-        if ($validator->fails()) {
+        //Image image
+        if ($request->hasFile('profile_picture')) {
+            $image = $request->file('profile_picture');
+            if ($image) {
 
-            return response()->json([
-                'status'  => false,
-                'message' => $validator->errors()
-            ],422);
-
-        }else {
-
-            $authid = auth()->user()->id;
-            $user =User::find($authid);
-
-            //Image image
-            if ($request->hasFile('profile_picture')) {
-                $image = $request->file('profile_picture');
-                if ($image) {
-
-                    if (Storage::exists('public' . $user->profile_picture)) {
-                        Storage::delete('public'  . $user->profile_picture);
-                    }
-
-                    $imageName = "User_". uniqid() . '.' . $image->getClientOriginalExtension();
-                    $image->storeAs('uploads/users/',$imageName,'public');
-                    $user->profile_picture = '/uploads/users/' . $imageName;
+                if (Storage::exists('public' . $user->profile_picture)) {
+                    Storage::delete('public'  . $user->profile_picture);
                 }
+
+                $imageName = "User_". uniqid() . '.' . $image->getClientOriginalExtension();
+                $image->storeAs('uploads/users/',$imageName,'public');
+                $user->profile_picture = '/uploads/users/' . $imageName;
             }
-
-
-            $user->first_name = $request->first_name;
-            $user->last_name = $request->last_name;
-            $user->phone_number = $request->phone_number;
-            $user->address = $request->address;
-            $user->city = $request->city;
-            $user->country = $request->country;
-            $user->organization = $request->organization;
-            $user->profession = $request->profession;
-            $user->save();
-
-            return response()->json([
-                'status'  => true,
-                'message' => "Your Profile Updated successfully.",
-                'data' => $user
-            ],200);
-
         }
+
+
+        $user->name = $request->name;
+        $user->city = $request->city;
+        $user->state = $request->state;
+        $user->country = $request->country;
+        $user->organization = $request->organization;
+        $user->profession = $request->profession;
+        $user->save();
+
+        return response()->json([
+            'status'  => true,
+            'message' => "Your Profile Updated successfully.",
+            'user' => $user
+        ],200);
+
     }
 
     //Change password

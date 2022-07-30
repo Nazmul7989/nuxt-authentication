@@ -20,14 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed5790b9-3c6d-4588-8dad-0ff60b74d3f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/plugins/objectToFormData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/app/Http/Controllers/Api/V1/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/app/Http/Controllers/Api/V1/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/components/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nuxt/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nuxt/routes.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/routes.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/vetur/tags.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/vetur/tags.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layouts/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/layouts/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layouts/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/layouts/Sidebar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/profile/ChangePassword.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/profile/ChangePassword.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/profile/Profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/profile/Profile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +91,7 @@
       <updated>1659063777174</updated>
       <workItem from="1659063778207" duration="38000" />
       <workItem from="1659068834054" duration="24518000" />
-      <workItem from="1659150274312" duration="13513000" />
+      <workItem from="1659150274312" duration="22363000" />
     </task>
     <servers />
   </component>

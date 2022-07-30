@@ -16,6 +16,7 @@ import { createStore } from './store.js'
 import nuxt_plugin_plugin_5682c4e6 from 'nuxt_plugin_plugin_5682c4e6' // Source: .\\components\\plugin.js (mode: 'all')
 import nuxt_plugin_axios_283de209 from 'nuxt_plugin_axios_283de209' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_vform_a6ff8a1a from 'nuxt_plugin_vform_a6ff8a1a' // Source: ..\\plugins\\vform.js (mode: 'all')
+import nuxt_plugin_objectToFormData_d421720e from 'nuxt_plugin_objectToFormData_d421720e' // Source: ..\\plugins\\objectToFormData.js (mode: 'all')
 import nuxt_plugin_swal_7ad53dd2 from 'nuxt_plugin_swal_7ad53dd2' // Source: ..\\plugins\\swal.js (mode: 'client')
 import nuxt_plugin_auth_1dcce207 from 'nuxt_plugin_auth_1dcce207' // Source: .\\auth.js (mode: 'all')
 
@@ -224,6 +225,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_vform_a6ff8a1a === 'function') {
     await nuxt_plugin_vform_a6ff8a1a(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_objectToFormData_d421720e === 'function') {
+    await nuxt_plugin_objectToFormData_d421720e(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_swal_7ad53dd2 === 'function') {

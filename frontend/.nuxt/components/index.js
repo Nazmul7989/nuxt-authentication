@@ -1,11 +1,11 @@
-export { default as Dashboard } from '../..\\components\\dashboard\\Dashboard.vue'
+export { default as AuthLogin } from '../..\\components\\auth\\Login.vue'
+export { default as AuthRegister } from '../..\\components\\auth\\Register.vue'
 export { default as LayoutsFooter } from '../..\\components\\layouts\\Footer.vue'
 export { default as LayoutsHeader } from '../..\\components\\layouts\\Header.vue'
 export { default as LayoutsSidebar } from '../..\\components\\layouts\\Sidebar.vue'
-export { default as AuthLogin } from '../..\\components\\auth\\Login.vue'
-export { default as AuthRegister } from '../..\\components\\auth\\Register.vue'
 export { default as ProfileChangePassword } from '../..\\components\\profile\\ChangePassword.vue'
 export { default as Profile } from '../..\\components\\profile\\Profile.vue'
+export { default as Dashboard } from '../..\\components\\dashboard\\Dashboard.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
