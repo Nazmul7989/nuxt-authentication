@@ -13,7 +13,7 @@
 
             <img v-if="user.profile_picture != null"
                  :src="imageURL + user.profile_picture"
-                 class="img-fluid rounded-circle border mb-2" width="128"
+                 class="rounded-circle border mb-2" width="128"
                  height="128" alt=""/>
             <img v-else src="~/assets/img/avatars/user.jpg"
                  class="img-fluid rounded-circle border mb-2" width="128"
@@ -82,7 +82,9 @@
                       <div class="mb-3">
                         <label for="profile_picture" class="form-label">Profile
                           Photo</label>
-                        <input type="file" id="profile_picture" class="form-control"
+                        <input type="file" ref="imageField"
+                               id="profile_picture"
+                               class="form-control"
                                @change="onImageChange"/>
                       </div>
                     </div>
@@ -130,7 +132,7 @@ export default {
 
       imageShow: null,
       errorMessage: '',
-      imageURL: process.env.NUXT_API_IMAGE_URL,
+      imageURL: this.$config.imageUrl,
     }
   },
   methods : {
@@ -158,9 +160,12 @@ export default {
       formData.append('profile_picture',this.form.profile_picture)
 
       await this.$axios.post('/update-profile',formData).then((res)=>{
-        this.form.profile_picture = '';
+        this.form.profile_picture = null;
+        this.$refs.imageField.value = null
 
-        this.$auth.fetchUser()
+        this.imageShow = null;
+
+        this.$auth.fetchUser();
 
         Toast.fire({
           icon: 'success',
@@ -205,6 +210,7 @@ export default {
       return this.$store.state.auth.user
     }
   },
+
 
 }
 </script>

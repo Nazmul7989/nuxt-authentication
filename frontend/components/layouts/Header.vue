@@ -213,7 +213,7 @@ export default {
   name: "Header",
   data(){
     return{
-      imageURL: process.env.NUXT_API_IMAGE_URL,
+      imageURL: this.$config.imageUrl,
     }
   },
   computed: {

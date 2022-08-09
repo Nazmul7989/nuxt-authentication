@@ -1,7 +1,7 @@
 <template>
   <nav id="sidebar" class="sidebar js-sidebar">
     <div class="sidebar-content js-simplebar">
-      <a class="sidebar-brand" href="index.html">
+      <nuxt-link to="/" class="sidebar-brand">
 					<span class="sidebar-brand-text align-middle">
 						Strise MVP
 					</span>
@@ -11,13 +11,12 @@
           <path d="M20 12L12 16L4 12"></path>
           <path d="M20 16L12 20L4 16"></path>
         </svg>
-      </a>
+      </nuxt-link>
 
       <div class="sidebar-user">
         <div class="d-flex justify-content-center">
           <div class="flex-shrink-0">
-            <img v-if="user.profile_picture != null"
-                 :src="imageURL + user.profile_picture" class="avatar img-fluid rounded me-1" alt="" />
+            <img v-if="user.profile_picture != null" :src="imageURL + user.profile_picture" class="avatar img-fluid rounded me-1" alt="" />
             <img v-else src="~/assets/img/avatars/user.jpg"
                  class="avatar img-fluid rounded me-1" alt="" />
           </div>
@@ -75,7 +74,7 @@ export default {
   name: "Sidebar",
   data(){
     return{
-      imageURL: process.env.NUXT_API_IMAGE_URL,
+      imageURL: this.$config.imageUrl,
     }
   },
   computed: {

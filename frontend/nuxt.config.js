@@ -57,6 +57,7 @@ export default {
     '@nuxtjs/auth-next',
     ['@nuxtjs/dotenv', { filename: '.env.local' }]
   ],
+
   //nuxt auth package configuration
   auth: {
     strategies: {
@@ -76,8 +77,6 @@ export default {
           login: { url: '/auth/login', method: 'post' },
           logout: { url: '/auth/logout', method: 'post' },
           user: { url: '/auth/me', method: 'post' },
-          changePassword: { url: '/change-password', method: 'post' },
-          updateProfile: { url: '/update-profile', method: 'post' }
         }
       }
     }
@@ -88,10 +87,17 @@ export default {
     middleware: ['auth']
   },
 
-  //axios configuration
-  axios: {
-    baseURL : process.env.NUXT_API_BASE_URL,
+  publicRuntimeConfig: {
+    axios: {
+      baseURL: process.env.NUXT_API_BASE_URL
+    },
+    imageUrl: process.env.NUXT_API_IMAGE_URL
   },
+
+  //axios configuration
+  // axios: {
+  //   baseURL : process.env.NUXT_API_BASE_URL,
+  // },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
